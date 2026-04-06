@@ -16,7 +16,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "glass-nav shadow-nav" : "bg-white/80 backdrop-blur-xl"}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "glass-nav shadow-nav" : "bg-white/90 backdrop-blur-xl"}`}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-black tracking-tight text-zinc-900" style={{ fontFamily: "Plus Jakarta Sans" }}>

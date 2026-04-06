@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
+/* Force light mode — this is a light theme site */
 :root {
+  color-scheme: light;
   --primary: #bc0100;
   --primary-container: #eb0000;
   --surface: #f9f9f9;
@@ -19,9 +21,10 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
-body {
-  background: var(--surface);
-  color: var(--on-surface);
+/* Override any dark mode — force light everywhere */
+html, body {
+  background: #f9f9f9 !important;
+  color: #1a1c1c !important;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -30,12 +33,24 @@ h1, h2, h3, h4, h5 {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Tailwind dark mode overrides — reset all dark: classes to light values */
+@media (prefers-color-scheme: dark) {
+  html:not(.force-dark) {
+    background: #f9f9f9 !important;
+    color: #1a1c1c !important;
+  }
+  html:not(.force-dark) body {
+    background: #f9f9f9 !important;
+    color: #1a1c1c !important;
+  }
+}
+
 .bg-primary-gradient {
   background: linear-gradient(135deg, #bc0100 0%, #eb0000 100%);
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
