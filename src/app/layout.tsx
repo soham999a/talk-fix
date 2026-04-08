@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SEOSchema from "@/components/SEOSchema";
 import AIChat from "@/components/AIChat";
+import AppointmentPopup from "@/components/AppointmentPopup";
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning style={{ backgroundColor: '#f9f9f9', color: '#1a1c1c' }}>
         {children}
         <AIChat />
+        <AppointmentPopup />
       </body>
     </html>
   );
