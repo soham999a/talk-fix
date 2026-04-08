@@ -138,25 +138,64 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-zinc-100 px-6 py-6 space-y-4">
-          <p className="text-[10px] font-bold text-red-700 uppercase tracking-widest">Repairs</p>
-          {SERVICES.slice(0, 6).map(s => (
-            <Link key={s.id} href={`/services/${s.id}`} onClick={() => setMobileOpen(false)} className="block text-zinc-600 hover:text-zinc-900 text-sm py-1">
-              {s.title}
-            </Link>
-          ))}
-          <div className="border-t border-zinc-100 pt-4 space-y-3">
-            <Link href="/locations" onClick={() => setMobileOpen(false)} className="block text-zinc-600 text-sm">Store Locations</Link>
-            <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-zinc-600 text-sm">About Us</Link>
-            <Link href="/blog" onClick={() => setMobileOpen(false)} className="block text-zinc-600 text-sm">Blog</Link>
-            <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-zinc-600 text-sm">Contact</Link>
+        <div className="md:hidden bg-white border-t border-zinc-100 px-5 py-5 space-y-4 max-h-[85vh] overflow-y-auto">
+
+          {/* Call Now — location list at top for mobile */}
+          <div>
+            <p className="text-[10px] font-bold text-red-700 uppercase tracking-widest mb-3">Call a Location</p>
+            <div className="space-y-2">
+              {LOCATIONS.map(loc => (
+                <a
+                  key={loc.id}
+                  href={`tel:${loc.phone.replace(/-/g, "")}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-between p-3 rounded-xl bg-zinc-50 hover:bg-red-50 active:bg-red-100 transition-colors group"
+                >
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[10px] font-bold text-red-700 uppercase tracking-wider">{loc.city}</p>
+                    <p className="text-sm font-semibold text-zinc-900 truncate">{loc.address}</p>
+                    <p className="text-xs text-zinc-500">{loc.phone}</p>
+                  </div>
+                  <div className="w-9 h-9 rounded-full bg-red-700/10 group-hover:bg-red-700 flex items-center justify-center transition-colors flex-shrink-0 ml-3">
+                    <svg className="w-4 h-4 text-red-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
-          <Link href="/book" onClick={() => setMobileOpen(false)} className="block w-full text-center bg-primary-gradient text-white font-bold px-5 py-3 rounded-xl">
-            Get Quote
-          </Link>
-          <a href="tel:9737785900" onClick={() => setMobileOpen(false)} className="block w-full text-center bg-zinc-100 text-zinc-900 font-bold px-5 py-3 rounded-xl text-sm">
-            Call 973-778-5900
-          </a>
+
+          {/* Repairs */}
+          <div className="border-t border-zinc-100 pt-4">
+            <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-3">Repairs</p>
+            <div className="grid grid-cols-2 gap-1">
+              {SERVICES.slice(0, 6).map(s => (
+                <Link key={s.id} href={`/services/${s.id}`} onClick={() => setMobileOpen(false)}
+                  className="text-zinc-600 hover:text-red-700 text-sm py-1.5 px-2 rounded-lg hover:bg-red-50 transition-all truncate">
+                  {s.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Nav links */}
+          <div className="border-t border-zinc-100 pt-4 grid grid-cols-2 gap-2">
+            {[["Store Locations", "/locations"], ["About Us", "/about"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
+              <Link key={href} href={href} onClick={() => setMobileOpen(false)}
+                className="text-zinc-600 text-sm py-2 px-3 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all">
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="border-t border-zinc-100 pt-4">
+            <Link href="/book" onClick={() => setMobileOpen(false)}
+              className="block w-full text-center bg-primary-gradient text-white font-bold px-5 py-3.5 rounded-xl text-sm">
+              Book Repair — Get Quote
+            </Link>
+          </div>
         </div>
       )}
     </nav>
