@@ -56,7 +56,7 @@ export default function AppointmentPopup() {
       onClick={e => { if (e.target === e.currentTarget) setShow(false); }}
     >
       {/* Modal */}
-      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
 
         {/* Close button */}
         <button

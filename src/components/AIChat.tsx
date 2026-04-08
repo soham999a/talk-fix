@@ -226,8 +226,8 @@ export default function AIChat() {
 
       {/* CHAT WINDOW */}
       <div
-        className={`fixed bottom-24 right-5 z-50 w-[340px] sm:w-[390px] bg-white rounded-2xl shadow-2xl border border-zinc-100 flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${open ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
-        style={{ maxHeight: "580px" }}
+        className={`fixed bottom-24 right-5 z-50 w-[calc(100vw-40px)] sm:w-[340px] md:w-[390px] bg-white rounded-2xl shadow-2xl border border-zinc-100 flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${open ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
+        style={{ maxHeight: "75vh" }}
       >
         {/* HEADER */}
         <div className="bg-primary-gradient px-4 py-3.5 flex items-center gap-3 flex-shrink-0">

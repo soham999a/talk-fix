@@ -73,7 +73,7 @@ export default function LocationsPage() {
             </div>
 
             {/* Right â€” map */}
-            <div className="lg:col-span-7 h-[600px] rounded-3xl overflow-hidden shadow-xl bg-zinc-200 relative">
+            <div className="lg:col-span-7 h-64 sm:h-96 lg:h-[600px] rounded-3xl overflow-hidden shadow-xl bg-zinc-200 relative">
               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-200 to-zinc-300">
                 <div className="text-center text-stone-500">
                   <svg className="w-16 h-16 mx-auto mb-3 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3" strokeWidth={1}/></svg>

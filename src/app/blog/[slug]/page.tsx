@@ -40,8 +40,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <Navbar />
-      <main className="pt-20 bg-[#f9f9f9]">
-        <article className="max-w-3xl mx-auto px-6 py-20">
+      <main className="pt-20 bg-stone-50">
+        <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-zinc-500 mb-8">
             <Link href="/" className="hover:text-red-700 transition-colors">Home</Link>
@@ -51,8 +51,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <span className="text-zinc-900 font-medium truncate max-w-[200px]">{post.title}</span>
           </div>
 
-          <span className="inline-block px-3 py-1 bg-[#ffdad4] text-[#410000] text-xs font-bold rounded-full mb-5">{post.category}</span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-900 mb-5 leading-tight" style={{ fontFamily: "Plus Jakarta Sans" }}>
+          <span className="inline-block px-3 py-1 bg-red-100 text-red-950 text-xs font-bold rounded-full mb-5">{post.category}</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 mb-5 leading-tight" style={{ fontFamily: "Plus Jakarta Sans" }}>
             {post.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-zinc-400 mb-10 pb-8 border-b border-zinc-200">
@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Content */}
           <div className="prose prose-zinc max-w-none">
             {post.content.split("\n\n").map((para, i) => (
-              <p key={i} className="text-[#603e39] leading-relaxed mb-5 text-base">
+              <p key={i} className="text-stone-600 leading-relaxed mb-5 text-base">
                 {para.startsWith("**") ? (
                   <strong className="text-zinc-900 font-bold">{para.replace(/\*\*/g, "")}</strong>
                 ) : para.startsWith("- ") ? (
