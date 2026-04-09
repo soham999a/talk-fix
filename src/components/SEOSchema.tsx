@@ -40,7 +40,7 @@ export default function SEOSchema() {
           { "@type": "Question", "name": "How much does phone repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on the device model and part option. Call your nearest location for an exact quote." } },
           { "@type": "Question", "name": "How long does a repair take?", "acceptedAnswer": { "@type": "Answer", "text": "Most repairs are completed within 30–45 minutes while you wait." } },
           { "@type": "Question", "name": "Do you offer a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every repair includes a 1-year warranty against defects." } },
-          { "@type": "Question", "name": "Do I need an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "No appointment needed. Walk-ins are always welcome at all 5 locations." } },
+          { "@type": "Question", "name": "Do I need an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "No appointment needed. Walk-ins are always welcome at all 4 Locations." } },
         ],
       },
     ],

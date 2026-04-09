@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const STATS = [
   { value: 6500, suffix: "+", label: "Google Reviews" },
-  { value: 5, suffix: "", label: "Locations" },
-  { value: 30, suffix: "min", label: "Avg Repair" },
+  { value: 4, suffix: "", label: "Locations" },
+  { value: 30, suffix: "min", label: "Screen Repair" },
   { value: 1000, suffix: "+", label: "Repairs / Month" },
 ];
 
@@ -91,12 +91,11 @@ export default function Hero() {
         <div className="relative hidden lg:block">
           <div className="absolute -top-10 -right-10 w-72 h-72 bg-red-600/5 rounded-full blur-3xl" />
           <div className="relative rounded-3xl overflow-hidden shadow-2xl float-anim">
-            <div className="w-full h-[420px] bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-              <div className="text-center text-zinc-500">
-                <svg className="w-16 h-16 mx-auto mb-3 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2" strokeWidth={1}/></svg>
-                <p className="text-sm font-medium opacity-50">Add repair shop photo here</p>
-              </div>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=800&q=80"
+              alt="Phone repair technician fixing a cracked smartphone screen"
+              className="w-full h-[420px] object-cover"
+            />
             <div className="absolute bottom-5 left-5 right-5 p-4 bg-white/85 backdrop-blur-xl rounded-2xl border border-white/50 shadow-lg">
               <p className="text-zinc-900 font-bold text-sm mb-0.5" style={{ fontFamily: "Plus Jakarta Sans" }}>Precision Guaranteed</p>
               <p className="text-zinc-600 text-xs">Genuine parts and advanced micro-soldering for all flagship models.</p>

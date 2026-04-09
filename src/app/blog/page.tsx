@@ -45,11 +45,12 @@ export default function BlogPage() {
             {/* Featured post */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-card mb-8 group hover:shadow-xl transition-all">
               <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="h-64 lg:h-auto bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                  <div className="text-center text-stone-500">
-                    <svg className="w-12 h-12 mx-auto mb-2 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1}/></svg>
-                    <p className="text-xs opacity-40">Featured image</p>
-                  </div>
+                <div className="h-64 lg:h-auto overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                    alt={POSTS[0].title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6 sm:p-10 flex flex-col justify-center">
                   <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 ${CATEGORY_COLORS[POSTS[0].category]}`}>{POSTS[0].category}</span>
@@ -76,8 +77,12 @@ export default function BlogPage() {
               {POSTS.slice(1).map(post => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}
                   className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 block">
-                  <div className="h-44 bg-gradient-to-br from-zinc-100 to-zinc-200 flex items-center justify-center">
-                    <svg className="w-10 h-10 opacity-20 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" strokeWidth={1}/></svg>
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={`https://images.unsplash.com/photo-${["1601972599720-36938d4ecd31","1556742049-0cfed4f6a45d","1512941937669-90a1b58e7e9c","1574944985070-8f3ebc6b79d2","1558618666-fcd25c85cd64","1611532736597-de2d4265fba3"][POSTS.slice(1).indexOf(post) % 6]}?w=600&q=80`}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">

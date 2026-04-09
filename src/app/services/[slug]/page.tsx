@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!service) return {};
   return {
     title: `${service.title} in Newark & Passaic NJ`,
-    description: `Professional ${service.title.toLowerCase()} in Newark and Passaic NJ. Same-day service. 1-year warranty. Walk-ins welcome. 5 locations.`,
+    description: `Professional ${service.title.toLowerCase()} in Newark and Passaic NJ. Same-day service. 1-year warranty. Walk-ins welcome. 4 Locations.`,
   };
 }
 
@@ -66,11 +66,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                <div className="text-center text-zinc-500">
-                  <svg className="w-16 h-16 mx-auto mb-3 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.8}><path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg>
-                  <p className="text-sm opacity-40">Add service photo here</p>
-                </div>
+              <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?w=800&q=80"
+                  alt="Device repair service"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-5 -left-5 bg-white p-5 rounded-2xl shadow-card max-w-[200px] border border-zinc-100">
                 <p className="font-bold text-xs text-red-700 uppercase tracking-wider mb-1">Est. Time</p>

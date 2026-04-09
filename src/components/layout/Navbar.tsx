@@ -181,7 +181,7 @@ export default function Navbar() {
 
           {/* Nav links */}
           <div className="border-t border-zinc-100 pt-4 grid grid-cols-2 gap-2">
-            {[["Store Locations", "/locations"], ["About Us", "/about"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
+            {[["Store Locations", "/locations"], ["Services", "/services"], ["About Us", "/about"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
               <Link key={href} href={href} onClick={() => setMobileOpen(false)}
                 className="text-zinc-600 text-sm py-2 px-3 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-all">
                 {label}

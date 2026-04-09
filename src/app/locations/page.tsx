@@ -31,7 +31,7 @@ export default function LocationsPage() {
                 <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 mt-3 mb-3" style={{ fontFamily: "Plus Jakarta Sans" }}>
                   Find Your Store
                 </h1>
-                <p className="text-stone-600 text-lg">5 locations across Newark & Passaic NJ. Walk-ins always welcome â€” no appointment needed.</p>
+                <p className="text-stone-600 text-lg">4 Locations across Newark & Passaic NJ. Walk-ins always welcome â€” no appointment needed.</p>
               </div>
 
               <div className="space-y-3">

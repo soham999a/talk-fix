@@ -10,13 +10,13 @@ export default function AppointmentPopup() {
   const [form, setForm] = useState({ name: "", phone: "", device: "", issue: "", location: "" });
 
   useEffect(() => {
-    // Show after 25s, max 2 times per session, resets on page refresh
+    // 10s delay, max 2 times per session, resets on page refresh (sessionStorage clears on refresh)
     const count = parseInt(sessionStorage.getItem("tnf_modal") ?? "0");
     if (count >= 2) return;
     const timer = setTimeout(() => {
       setShow(true);
       sessionStorage.setItem("tnf_modal", String(count + 1));
-    }, 25000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 

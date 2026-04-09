@@ -1,4 +1,4 @@
-﻿import { LOCATIONS } from "@/lib/data";
+import { LOCATIONS } from "@/lib/data";
 
 export default function Locations() {
   return (
@@ -9,7 +9,7 @@ export default function Locations() {
           <div className="lg:col-span-5">
             <p className="text-red-700 font-bold tracking-[0.2em] text-xs sm:text-sm mb-3 uppercase">Find Us</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 mb-3" style={{ fontFamily: "Plus Jakarta Sans" }}>
-              5 Locations Near You
+              4 Locations Near You
             </h2>
             <p className="text-stone-600 mb-6 text-sm leading-relaxed">
               Walk-ins always welcome. No appointment needed. Open 7 days a week.
@@ -42,15 +42,13 @@ export default function Locations() {
             </div>
           </div>
 
-          {/* Right — map, hidden on mobile to save space */}
-          <div className="lg:col-span-7 h-64 sm:h-96 lg:h-[560px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl bg-zinc-200 relative">
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-200 to-zinc-300">
-              <div className="text-center text-zinc-500 px-4">
-                <svg className="w-12 h-12 mx-auto mb-3 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3" strokeWidth={1}/></svg>
-                <p className="text-sm font-medium opacity-50">Google Maps embed goes here</p>
-                <p className="text-xs opacity-40 mt-1">Newark & Passaic, NJ</p>
-              </div>
-            </div>
+          <div className="lg:col-span-7 h-64 sm:h-96 lg:h-[560px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl relative">
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80"
+              alt="Map of Newark and Passaic NJ locations"
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            />
+            <div className="absolute inset-0 bg-red-700/5" />
             <div className="absolute bottom-4 right-4 left-4 sm:left-auto sm:right-6 sm:bottom-6 bg-white/90 backdrop-blur px-4 py-3 rounded-xl shadow-lg border border-zinc-100 sm:max-w-xs">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-red-600 text-sm">★★★★★</span>

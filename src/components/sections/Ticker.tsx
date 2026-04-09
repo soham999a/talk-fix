@@ -1,8 +1,8 @@
 const items = [
-  "iPhone Screen Repair", "Samsung Screen Repair", "Battery Replacement",
+  "Phone Screen Repair in 30-45 Min", "Samsung Screen Repair", "Battery Replacement",
   "Charging Port Repair", "Back Glass Repair", "iPad Screen Repair",
   "Game Console HDMI", "Water Damage Repair", "Same-Day Service",
-  "1-Year Warranty", "Free Diagnostics", "Walk-ins Welcome",
+  "1-Year Warranty Available", "Free Diagnostics", "Walk-ins Welcome",
 ];
 
 export default function Ticker() {

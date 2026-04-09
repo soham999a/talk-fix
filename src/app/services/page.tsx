@@ -101,14 +101,15 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                <div className="text-center text-stone-500">
-                  <svg className="w-20 h-20 mx-auto mb-3 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.8}><path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg>
-                  <p className="text-sm opacity-40">Add technician photo here</p>
-                </div>
+              <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                  alt="Professional phone repair technician"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Floating stat card */}
-              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur p-6 rounded-2xl shadow-xl max-w-[220px] border border-zinc-1000">
+              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur p-6 rounded-2xl shadow-xl max-w-[220px] border border-zinc-100">
                 <p className="font-bold text-xs text-red-700 uppercase tracking-wider mb-1">Live Status</p>
                 <p className="text-2xl font-black text-zinc-900" style={{ fontFamily: "Plus Jakarta Sans" }}>98% Success</p>
                 <p className="text-stone-600 text-xs mt-1">On water damage recoveries this month.</p>

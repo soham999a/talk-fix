@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "About Us â€” Our Story",
-  description: "Learn about Talk N Fix Wireless, founded in 2014 by Rey. From a single store to 5 locations across Newark & Passaic NJ, repairing 1,000+ devices monthly.",
+  description: "Learn about Talk N Fix Wireless, founded in 2014 by Rey. From a single store to 4 Locations across Newark & Passaic NJ, repairing 1,000+ devices monthly.",
 };
 
 const STATS = [
@@ -67,11 +67,12 @@ export default function AboutPage() {
               </Link>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                <div className="text-center text-stone-500">
-                  <svg className="w-16 h-16 mx-auto mb-3 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.8}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7Z"/></svg>
-                  <p className="text-sm opacity-40">Add founder photo here</p>
-                </div>
+              <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+                  alt="Talk N Fix Wireless store interior"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

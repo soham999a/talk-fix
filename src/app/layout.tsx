@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SEOSchema from "@/components/SEOSchema";
 import AIChat from "@/components/AIChat";
-import AppointmentPopup from "@/components/AppointmentPopup";
+import OfferBanner from "@/components/OfferBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Talk N Fix Wireless",
   },
   description:
-    "Professional cell phone, tablet & device repair in Newark and Passaic NJ. Same-day service in 30–45 minutes. 1-year warranty. 5 locations. Walk-ins welcome.",
+    "Professional cell phone, tablet & device repair in Newark and Passaic NJ. Same-day service in 30–45 minutes. 1-year warranty. 4 Locations. Walk-ins welcome.",
   keywords: [
     "phone repair Newark NJ",
     "phone repair Passaic NJ",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Talk N Fix Wireless",
     title: "Talk N Fix Wireless | Same-Day Phone Repair Newark & Passaic NJ",
     description:
-      "Same-day phone repair in 30–45 minutes. 5 locations across Newark & Passaic NJ. 1-year warranty. Walk-ins welcome.",
+      "Same-day phone repair in 30–45 minutes. 4 Locations across Newark & Passaic NJ. 1-year warranty. Walk-ins welcome.",
   },
   twitter: {
     card: "summary_large_image",
@@ -46,9 +46,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SEOSchema />
       </head>
       <body suppressHydrationWarning style={{ backgroundColor: '#f9f9f9', color: '#1a1c1c' }}>
+        <OfferBanner />
         {children}
         <AIChat />
-        <AppointmentPopup />
       </body>
     </html>
   );

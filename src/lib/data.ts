@@ -6,7 +6,7 @@ export const BUSINESS = {
   reviews: "6,500+",
   repairsMonthly: "1,000+",
   avgRepairTime: "30–45 min",
-  warranty: "1-Year",
+  warranty: "1-Year Warranty Available",
 };
 
 export const LOCATIONS = [
@@ -31,17 +31,6 @@ export const LOCATIONS = [
     phone: "973-894-3600",
     hours: { weekday: "Mon–Sat: 9am – 7:45pm", weekend: "Sun: 10am – 5:45pm" },
     mapsUrl: "https://maps.google.com/?q=315+Monroe+St+Passaic+NJ+07055",
-  },
-  {
-    id: "passaic-165",
-    city: "Passaic",
-    label: "Passaic Market",
-    address: "165 Market St",
-    cityStateZip: "Passaic, NJ 07055",
-    note: "",
-    phone: "973-767-2493",
-    hours: { weekday: "Mon–Sat: 9am – 7:45pm", weekend: "Sun: 10am – 5:45pm" },
-    mapsUrl: "https://maps.google.com/?q=165+Market+St+Passaic+NJ+07055",
   },
   {
     id: "newark-207",
