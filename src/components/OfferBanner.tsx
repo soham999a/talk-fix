@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { LOCATIONS } from "@/lib/data";
 
+// Module-level counter — resets on every page refresh (unlike sessionStorage)
+// This means: 2 popups per page load, resets when user refreshes
+let pageLoadShowCount = 0;
+
 export default function OfferBanner() {
   const [show, setShow] = useState(false);
   const [step, setStep] = useState<"offer" | "form" | "done">("offer");
@@ -11,19 +15,31 @@ export default function OfferBanner() {
   const router = useRouter();
 
   useEffect(() => {
-    // Show after 10s, max 2x per session, resets on refresh
-    const count = parseInt(sessionStorage.getItem("tnf_banner") ?? "0");
-    if (count >= 2) return;
+    // Show max 2 times per page load, 10s delay first time, 30s delay second time
+    if (pageLoadShowCount >= 2) return;
+
+    const delay = pageLoadShowCount === 0 ? 10000 : 30000;
+
     const timer = setTimeout(() => {
+      pageLoadShowCount += 1;
       setShow(true);
-      sessionStorage.setItem("tnf_banner", String(count + 1));
-    }, 10000);
+    }, delay);
+
     return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function dismiss() {
     setShow(false);
     setStep("offer");
+    // If this was the first popup, schedule the second one after 30s
+    if (pageLoadShowCount < 2) {
+      setTimeout(() => {
+        pageLoadShowCount += 1;
+        setShow(true);
+        setStep("offer");
+      }, 30000);
+    }
   }
 
   async function submit(e: React.FormEvent) {
