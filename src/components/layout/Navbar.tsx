@@ -85,6 +85,7 @@ export default function Navbar() {
 
           <Link href="/about" className={navLinkClass("/about")}>About Us</Link>
           <Link href="/blog" className={navLinkClass("/blog")}>Blog</Link>
+          <Link href="/contact" className={navLinkClass("/contact")}>Contact</Link>
         </div>
 
         {/* CTA */}
