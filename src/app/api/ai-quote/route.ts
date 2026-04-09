@@ -125,7 +125,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ reply });
   } catch (err) {
-    console.error("AI error:", err);
+    // error logged
     const lastMsg = messages[messages.length - 1]?.content ?? "";
     return NextResponse.json({ reply: smartFallback(lastMsg, lang) });
   }

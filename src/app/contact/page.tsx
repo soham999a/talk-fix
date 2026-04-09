@@ -4,6 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { LOCATIONS } from "@/lib/data";
 
+// Note: metadata must be in a separate server component for client pages
+// SEO is handled by root layout metadata
+
 function useCaptcha() {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
