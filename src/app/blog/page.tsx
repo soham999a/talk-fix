@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 };
 
 const BLOG_IMAGES = [
-  "https://www.talknfixwireless.com/wp-content/uploads/2025/09/How-to-Ensure-Quality-Cell-Phone-Repair-in-Newark-NJ.jpg",
-  "https://www.talknfixwireless.com/wp-content/uploads/2025/08/The-Complete-Guide-to-iPhone-Repair-Options-in-New-Jersey.jpg",
-  "https://www.talknfixwireless.com/wp-content/uploads/2025/09/Samsung-Broken-Screen-Heres-How-We-Fix-It-in-Passaic-NJ.jpg",
-  "https://www.talknfixwireless.com/wp-content/uploads/2025/09/How-Battery-Replacement-Services-Can-Revive-Your-iPhone-in-New-Jersey.jpg",
-  "https://www.talknfixwireless.com/wp-content/uploads/2025/09/Why-Computer-Repair-Services-in-Passaic-NJ-Offer-Great-Value.jpg",
-  "https://www.talknfixwireless.com/wp-content/uploads/2025/08/Why-Choosing-a-Trusted-Wireless-Repair-Service-in-Passaic-NJ-Matters.jpg",
+  "/hero.png",
+  "/secondpic.png",
+  "/team.png",
+  "/hero.png",
+  "/secondpic.png",
+  "/team.png",
 ];
 
 const POSTS = [

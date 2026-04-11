@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createContactMessage } from "@/lib/firestore";
 import { sendContactEmail } from "@/lib/email";
 
 function sanitize(str: unknown, maxLen = 500): string {
@@ -23,17 +22,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Basic phone validation
     if (!/^[\d\s\-\+\(\)]{7,20}$/.test(phone)) {
       return NextResponse.json({ error: "Invalid phone number" }, { status: 400 });
     }
 
-    const ref = await createContactMessage({ name, phone, email, device, location, message, smsOptIn });
+    // Save to Firebase (non-blocking — don't fail if Firebase is down)
+    try {
+      const { createContactMessage } = await import("@/lib/firestore");
+      await createContactMessage({ name, phone, email, device, location, message, smsOptIn });
+    } catch { /* Firebase optional */ }
 
-    // Send email notification
+    // Send email via Resend (primary notification)
     await sendContactEmail({ name, phone, email, device, location, message }).catch(() => {});
 
-    return NextResponse.json({ success: true, id: ref.id });
+    return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
   }

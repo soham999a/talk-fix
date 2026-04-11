@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createBooking } from "@/lib/firestore";
 import { sendBookingEmail } from "@/lib/email";
 
 function sanitize(str: unknown, maxLen = 500): string {
@@ -27,12 +26,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid phone number" }, { status: 400 });
     }
 
-    const ref = await createBooking({ name, phone, email, device, service, location, issue });
+    // Save to Firebase (non-blocking)
+    try {
+      const { createBooking } = await import("@/lib/firestore");
+      await createBooking({ name, phone, email, device, service, location, issue });
+    } catch { /* Firebase optional */ }
 
-    // Send email notification to talknfixwireless@gmail.com
+    // Send email via Resend (primary notification)
     await sendBookingEmail({ name, phone, email, device, service, location, issue }).catch(() => {});
 
-    return NextResponse.json({ success: true, id: ref.id });
+    return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: "Failed to save booking" }, { status: 500 });
   }
