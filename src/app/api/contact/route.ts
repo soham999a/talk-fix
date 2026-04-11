@@ -30,15 +30,6 @@ export async function POST(req: NextRequest) {
 
     const ref = await createContactMessage({ name, phone, email, device, location, message, smsOptIn });
 
-    // Also notify via Netlify Forms (sends email to talknfixwireless@gmail.com)
-    try {
-      await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ "form-name": "contact", name, phone, email: email || "", device: device || "", location: location || "", message }).toString(),
-      });
-    } catch { /* Netlify forms optional */ }
-
     // Send email notification
     await sendContactEmail({ name, phone, email, device, location, message }).catch(() => {});
 

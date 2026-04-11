@@ -119,9 +119,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <h2 className="text-2xl font-extrabold text-zinc-900 mb-6" style={{ fontFamily: "Plus Jakarta Sans" }}>Send Us a Message</h2>
-                    <form onSubmit={submit} className="space-y-4" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                      <input type="hidden" name="form-name" value="contact" />
-                      <input type="hidden" name="bot-field" className="hidden" />
+                    <form onSubmit={submit} className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-bold text-stone-500 uppercase tracking-widest mb-1.5">Name *</label>

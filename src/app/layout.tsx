@@ -87,15 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SEOSchema />
       </head>
       <body suppressHydrationWarning style={{ backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
-        {/* Hidden Netlify forms for email notifications */}
-        <form name="contact" data-netlify="true" hidden>
-          <input name="name" /><input name="phone" /><input name="email" />
-          <input name="device" /><input name="location" /><textarea name="message" />
-        </form>
-        <form name="booking" data-netlify="true" hidden>
-          <input name="name" /><input name="phone" /><input name="email" />
-          <input name="device" /><input name="service" /><input name="location" /><input name="issue" />
-        </form>
         <OfferBanner />
         {children}
         <AIChat />
