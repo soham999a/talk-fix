@@ -1,9 +1,6 @@
 import { Resend } from "resend";
 
-const TO = [
-  process.env.NOTIFY_EMAIL ?? "dassoham345@gmail.com",
-  "talknfixwireless@gmail.com",
-];
+const TO = process.env.NOTIFY_EMAIL ?? "dassoham345@gmail.com";
 const FROM = "Talk N Fix Wireless <onboarding@resend.dev>";
 
 function getResend() {
