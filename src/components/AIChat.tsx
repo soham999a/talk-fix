@@ -435,7 +435,7 @@ export default function AIChat() {
           </div>
           <div className="flex items-center justify-center gap-1.5 mt-2">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 text-zinc-300"><circle cx="12" cy="12" r="10"/></svg>
-            <span className="text-xs text-zinc-300 font-medium">{t.poweredBy} <span className="text-zinc-400 font-bold">Nicecare</span></span>
+            <span className="text-xs text-zinc-300 font-medium">{t.poweredBy} <span className="text-zinc-400 font-bold">NiceCare</span></span>
           </div>
         </div>
       </div>
