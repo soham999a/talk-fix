@@ -43,7 +43,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-base font-bold text-zinc-900 mb-2" style={{ fontFamily: "Plus Jakarta Sans" }}>Opt-Out Option</h2>
-              <p>You understand that you can withdraw your consent at any time by replying <strong>STOP</strong> to any text message or by contacting us at <a href="mailto:repair@talknfixwireless.com" className="text-red-700 hover:underline font-medium">repair@talknfixwireless.com</a>. For assistance, you can reply <strong>HELP</strong>.</p>
+              <p>You understand that you can withdraw your consent at any time by replying <strong>STOP</strong> to any text message or by contacting us at <a href="mailto:talknfixwireless@gmail.com" className="text-red-700 hover:underline font-medium">talknfixwireless@gmail.com</a>. For assistance, you can reply <strong>HELP</strong>.</p>
             </section>
 
             <section>
@@ -57,7 +57,7 @@ export default function TermsPage() {
             </section>
 
             <div className="border-t border-zinc-100 pt-6">
-              <p className="text-xs text-stone-400">For questions, contact us at <a href="mailto:repair@talknfixwireless.com" className="text-red-700 hover:underline">repair@talknfixwireless.com</a></p>
+              <p className="text-xs text-stone-400">For questions, contact us at <a href="mailto:talknfixwireless@gmail.com" className="text-red-700 hover:underline">talknfixwireless@gmail.com</a></p>
             </div>
 
           </div>

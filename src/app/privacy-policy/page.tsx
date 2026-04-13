@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
                 <li>Withdraw your consent at any time.</li>
                 <li>Object to how we process your Personal Information.</li>
               </ul>
-              <p className="mt-3">You can exercise these rights by contacting us at <a href="mailto:repair@talknfixwireless.com" className="text-red-700 hover:underline font-medium">repair@talknfixwireless.com</a></p>
+              <p className="mt-3">You can exercise these rights by contacting us at <a href="mailto:talknfixwireless@gmail.com" className="text-red-700 hover:underline font-medium">talknfixwireless@gmail.com</a></p>
             </section>
 
             <section>
@@ -102,7 +102,7 @@ export default function PrivacyPolicyPage() {
 
             <section>
               <h2 className="text-lg font-bold text-zinc-900 mb-3" style={{ fontFamily: "Plus Jakarta Sans" }}>10. Contact Us</h2>
-              <p>For any questions or concerns regarding this policy, please reach out to our support team at <a href="mailto:repair@talknfixwireless.com" className="text-red-700 hover:underline font-medium">repair@talknfixwireless.com</a></p>
+              <p>For any questions or concerns regarding this policy, please reach out to our support team at <a href="mailto:talknfixwireless@gmail.com" className="text-red-700 hover:underline font-medium">talknfixwireless@gmail.com</a></p>
             </section>
 
             <section className="border-t border-zinc-100 pt-6">

@@ -68,12 +68,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
 
         {/* ── LOGO ── */}
-        <Link
-          href="/"
-          className="font-black tracking-tight text-zinc-900 text-base xl:text-lg flex-shrink-0"
-          style={{ fontFamily: "Plus Jakarta Sans" }}
-        >
-          Talk N&apos; Fix Wireless
+        <Link href="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="Talk N Fix Wireless">
+          <img
+            src="/logo-icon.jpg"
+            alt="Talk N Fix Wireless"
+            className="h-9 w-9 rounded-lg object-cover flex-shrink-0"
+          />
+          <span className="font-black text-zinc-900 text-sm leading-tight hidden sm:block" style={{ fontFamily: "Plus Jakarta Sans" }}>
+            Talk N&apos; Fix<br />
+            <span className="text-red-700">Wireless</span>
+          </span>
         </Link>
 
         {/* ── DESKTOP NAV (lg+) ── */}
@@ -135,6 +139,7 @@ export default function Navbar() {
 
           <Link href="/about" className={`${linkCls("/about")} px-3 py-2 rounded-lg hover:bg-zinc-50`}>About</Link>
           <Link href="/blog" className={`${linkCls("/blog")} px-3 py-2 rounded-lg hover:bg-zinc-50`}>Blog</Link>
+          <Link href="/pricing" className={`${linkCls("/pricing")} px-3 py-2 rounded-lg hover:bg-zinc-50`}>Pricing</Link>
           <Link href="/contact" className={`${linkCls("/contact")} px-3 py-2 rounded-lg hover:bg-zinc-50`}>Contact</Link>
         </div>
 
@@ -237,7 +242,7 @@ export default function Navbar() {
 
           {/* Nav links */}
           <div className="border-t border-zinc-100 pt-4 grid grid-cols-2 gap-1">
-            {[["Locations", "/locations"], ["Services", "/services"], ["About Us", "/about"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
+            {[["Locations", "/locations"], ["Services", "/services"], ["Pricing", "/pricing"], ["About Us", "/about"], ["Blog", "/blog"], ["Contact", "/contact"]].map(([label, href]) => (
               <Link key={href} href={href} onClick={() => setMobileOpen(false)}
                 className={`text-sm py-2 px-3 rounded-lg transition-all ${isActive(href) ? "text-red-700 bg-red-50 font-semibold" : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900"}`}>
                 {label}

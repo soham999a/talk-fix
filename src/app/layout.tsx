@@ -3,12 +3,18 @@ import "./globals.css";
 import SEOSchema from "@/components/SEOSchema";
 import AIChat from "@/components/AIChat";
 import OfferBanner from "@/components/OfferBanner";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.talknfixwireless.com"),
   title: {
     default: "Talk N Fix Wireless | Same-Day Phone Repair Newark & Passaic NJ",
     template: "%s | Talk N Fix Wireless",
+  },
+  icons: {
+    icon: "/logo-icon.jpg",
+    apple: "/logo-icon.jpg",
+    shortcut: "/logo-icon.jpg",
   },
   description:
     "Talk N Fix Wireless — professional cell phone repair in Newark & Passaic NJ. iPhone screen repair, Samsung repair, battery replacement. Same-day service in 30-45 Mins. 1-year warranty available. Walk-ins welcome. 4 locations.",
@@ -90,6 +96,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <OfferBanner />
         {children}
         <AIChat />
+        {/* LeadConnector chatbot — tracks client questions */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6998b3996e6009dfae3af48a"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
