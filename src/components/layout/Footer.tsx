@@ -139,7 +139,7 @@ export default function Footer() {
         <div className="border-t border-zinc-200 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-500">
           <span className="text-center sm:text-left">© 2026 Talk N Fix Wireless. All rights reserved. Newark & Passaic, NJ.</span>
           <div className="flex items-center gap-4">
-            <a href="mailto:talknfixwireless@gmail.com" className="hover:text-red-700 transition-colors">talknfixwireless@gmail.com</a>
+            <span className="font-semibold text-zinc-500">Powered by <span className="text-red-700">NiceCare</span></span>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-100 text-xs font-bold text-zinc-600">
               <svg className="w-3 h-3 text-red-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
               Certified Technicians
