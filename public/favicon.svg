@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Black rounded square -->
+  <rect width="32" height="32" rx="7" fill="#0d0d0d"/>
+
+  <!-- Phone body -->
+  <rect x="8" y="3" width="16" height="26" rx="3" fill="none" stroke="white" stroke-width="1.5"/>
+
+  <!-- Notch -->
+  <rect x="11" y="2" width="10" height="3" rx="1.5" fill="#0d0d0d"/>
+  <rect x="12" y="2.5" width="8" height="2" rx="1" fill="none" stroke="white" stroke-width="1.2"/>
+
+  <!-- Home bar -->
+  <rect x="12" y="26.5" width="8" height="1.5" rx="0.75" fill="white" opacity="0.5"/>
+
+  <!-- Red cross -->
+  <rect x="14.5" y="10" width="3" height="12" rx="1.5" fill="#DC2626"/>
+  <rect x="10" y="14.5" width="12" height="3" rx="1.5" fill="#DC2626"/>
+</svg>

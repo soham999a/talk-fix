@@ -12,9 +12,12 @@ export const metadata: Metadata = {
     template: "%s | Talk N Fix Wireless",
   },
   icons: {
-    icon: "/logo-icon.jpg",
-    apple: "/logo-icon.jpg",
-    shortcut: "/logo-icon.jpg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/logo-icon.jpg", sizes: "any" },
+    ],
+    apple: "/logo-icon.svg",
+    shortcut: "/favicon.svg",
   },
   description:
     "Talk N Fix Wireless — professional cell phone repair in Newark & Passaic NJ. iPhone screen repair, Samsung repair, battery replacement. Same-day service in 30-45 Mins. 1-year warranty available. Walk-ins welcome. 4 locations.",

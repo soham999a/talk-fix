@@ -50,7 +50,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 flex items-center gap-2.5" aria-label="Talk N Fix Wireless">
-              <img src="/logo-icon.jpg" alt="Talk N Fix Wireless" className="h-9 w-9 rounded-lg object-cover flex-shrink-0" />
+              <img src="/logo-icon.svg" alt="Talk N Fix Wireless" className="h-9 w-9 rounded-xl object-contain flex-shrink-0" />
               <span className="text-base font-black text-zinc-900 leading-tight" style={{ fontFamily: "Plus Jakarta Sans" }}>
                 Talk N&apos; Fix<br /><span className="text-red-700">Wireless</span>
               </span>

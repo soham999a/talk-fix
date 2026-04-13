@@ -70,9 +70,9 @@ export default function Navbar() {
         {/* ── LOGO ── */}
         <Link href="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="Talk N Fix Wireless">
           <img
-            src="/logo-icon.jpg"
+            src="/logo-icon.svg"
             alt="Talk N Fix Wireless"
-            className="h-9 w-9 rounded-lg object-cover flex-shrink-0"
+            className="h-9 w-9 rounded-xl object-contain flex-shrink-0"
           />
           <span className="font-black text-zinc-900 text-sm leading-tight hidden sm:block" style={{ fontFamily: "Plus Jakarta Sans" }}>
             Talk N&apos; Fix<br />

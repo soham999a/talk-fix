@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Black rounded square background -->
+  <rect width="100" height="100" rx="22" fill="#0d0d0d"/>
+
+  <!-- Phone body — tall portrait rectangle with rounded corners -->
+  <rect x="27" y="12" width="46" height="76" rx="9" fill="none" stroke="white" stroke-width="3.5"/>
+
+  <!-- Notch at top center -->
+  <rect x="38" y="10" width="24" height="7" rx="3.5" fill="#0d0d0d"/>
+  <rect x="40" y="11.5" width="20" height="4" rx="2" fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- Home bar at bottom -->
+  <rect x="39" y="81" width="22" height="3" rx="1.5" fill="white" opacity="0.5"/>
+
+  <!-- Red cross / plus — centered in phone body -->
+  <!-- Vertical bar -->
+  <rect x="46" y="33" width="8" height="34" rx="4" fill="#DC2626"/>
+  <!-- Horizontal bar -->
+  <rect x="33" y="46" width="34" height="8" rx="4" fill="#DC2626"/>
+</svg>
