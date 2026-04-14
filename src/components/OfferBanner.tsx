@@ -238,7 +238,7 @@ export default function OfferBanner() {
                 </span>
                 <h2 className="text-2xl font-extrabold text-zinc-900 mb-3 leading-tight" style={{ fontFamily: "Plus Jakarta Sans" }}>
                   Phone Screen Repair<br />
-                  <span className="text-red-700">in 30-45 Minsutes</span>
+                  <span className="text-red-700">in 30-45 Minutes</span>
                 </h2>
                 <p className="text-stone-500 text-sm leading-relaxed mb-6">
                   Walk in today at any of our 4 NJ locations. Certified technicians, OEM-grade parts, and a 1-year warranty available on every repair.

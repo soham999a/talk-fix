@@ -180,7 +180,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="/book" className="bg-primary-gradient text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg hover:brightness-110 transition-all active:scale-95 whitespace-nowrap">
+          <Link href="/pricing" className="bg-primary-gradient text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg hover:brightness-110 transition-all active:scale-95 whitespace-nowrap">
             Get Quote
           </Link>
         </div>

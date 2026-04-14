@@ -89,7 +89,7 @@ export default function SEOSchema() {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "How much does iPhone screen repair cost in Newark NJ?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone screen repair at Talk N Fix Wireless ranges from $79 to $329 depending on your model. Call 973-778-5900 for an exact quote." } },
-          { "@type": "Question", "name": "How long does phone repair take?", "acceptedAnswer": { "@type": "Answer", "text": "Most phone screen repairs are completed within 30-45 Minsutes while you wait in-store." } },
+          { "@type": "Question", "name": "How long does phone repair take?", "acceptedAnswer": { "@type": "Answer", "text": "Most phone screen repairs are completed within 30-45 Minutes while you wait in-store." } },
           { "@type": "Question", "name": "Do you offer a warranty on repairs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, a 1-year warranty is available on repairs at Talk N Fix Wireless." } },
           { "@type": "Question", "name": "Do I need an appointment for phone repair?", "acceptedAnswer": { "@type": "Answer", "text": "No appointment needed. Walk-ins are always welcome at all 4 locations in Newark and Passaic NJ." } },
           { "@type": "Question", "name": "Where is Talk N Fix Wireless located?", "acceptedAnswer": { "@type": "Answer", "text": "Talk N Fix Wireless has 4 locations: 354 Passaic St Passaic NJ, 315 Monroe St Passaic NJ, 207 Ferry St Newark NJ, and 674 Mt. Prospect Ave Newark NJ." } },

@@ -68,14 +68,6 @@ const BENTO_SERVICES = [
   },
 ];
 
-const PRICING_TABLE = [
-  { model: "iPhone 15 Pro Max", screen: "$329", battery: "$99", port: "$89" },
-  { model: "iPhone 14", screen: "$229", battery: "$89", port: "$79" },
-  { model: "iPhone 13", screen: "$199", battery: "$79", port: "$69" },
-  { model: "Samsung S24 Ultra", screen: "$349", battery: "$109", port: "$99" },
-  { model: "Samsung S23", screen: "$249", battery: "$89", port: "$79" },
-  { model: "Samsung S22", screen: "$219", battery: "$79", port: "$69" },
-];
 
 export default function ServicesPage() {
   return (
@@ -214,37 +206,21 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Pricing table */}
-        <section className="px-4 sm:px-6 py-14 sm:py-14 sm:py-24 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        {/* Pricing CTA */}
+        <section className="px-4 sm:px-6 py-14 sm:py-24 max-w-7xl mx-auto">
+          <div className="text-center mb-10">
             <span className="text-[0.75rem] font-bold tracking-[0.2em] text-stone-600 uppercase mb-4 block">Transparent Pricing</span>
-            <h2 className="text-3xl sm:text-4xl md:text-3xl sm:text-5xl font-extrabold text-zinc-900" style={{ fontFamily: "Plus Jakarta Sans" }}>Major Model Estimates</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-zinc-900 mb-4" style={{ fontFamily: "Plus Jakarta Sans" }}>Major Model Estimates</h2>
+            <p className="text-stone-600 max-w-xl mx-auto mb-8">Pricing varies by model and part. See our full pricing page or call your nearest location for an exact quote — always free, always honest.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing" className="bg-primary-gradient text-white font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all shadow-lg">
+                View Full Pricing →
+              </Link>
+              <a href="tel:9737785900" className="border-2 border-zinc-200 text-zinc-700 font-bold px-8 py-4 rounded-xl hover:bg-zinc-50 transition-all">
+                Call for Exact Quote
+              </a>
+            </div>
           </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-zinc-200">
-                  <th className="py-5 px-4 font-bold text-zinc-900 text-base" style={{ fontFamily: "Plus Jakarta Sans" }}>Model</th>
-                  <th className="py-5 px-4 font-bold text-zinc-900 text-base">Screen Repair</th>
-                  <th className="py-5 px-4 font-bold text-zinc-900 text-base">Battery Swap</th>
-                  <th className="py-5 px-4 font-bold text-zinc-900 text-base">Charging Port</th>
-                </tr>
-              </thead>
-              <tbody className="text-stone-600">
-                {PRICING_TABLE.map((row, i) => (
-                  <tr key={i} className={`${i % 2 === 1 ? "bg-zinc-100" : ""} hover:bg-red-100/20 transition-colors`}>
-                    <td className="py-5 px-4 font-bold text-zinc-900">{row.model}</td>
-                    <td className="py-5 px-4">{row.screen}</td>
-                    <td className="py-5 px-4">{row.battery}</td>
-                    <td className="py-5 px-4">{row.port}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-6 text-sm text-center text-stone-600 italic">
-            * All prices are estimates. Final quote provided after visual inspection. Call for exact pricing.
-          </p>
         </section>
 
         {/* Process steps â€” dark */}
@@ -254,7 +230,7 @@ export default function ServicesPage() {
               <div className="hidden md:block absolute top-8 left-0 w-full h-px bg-white/10" />
               {[
                 { n: "1", title: "Book Online", desc: "Select your model and issue. Get an instant preliminary quote and reserve your time slot." },
-                { n: "2", title: "Drop Off", desc: "Visit any of our 5 NJ locations. Our team will check your device in within 5 minutes." },
+                { n: "2", title: "Drop Off", desc: "Visit any of our 4 NJ locations. Our team will check your device in within 5 minutes." },
                 { n: "3", title: "Expert Repair", desc: "Certified technicians perform the repair in our clean, professional workspace." },
                 { n: "4", title: "Quality Check", desc: "Every device undergoes a 20-point functionality test before handoff with your new warranty." },
               ].map((step, i) => (

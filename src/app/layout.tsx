@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SEOSchema from "@/components/SEOSchema";
-import AIChat from "@/components/AIChat";
 import OfferBanner from "@/components/OfferBanner";
 import Script from "next/script";
 
@@ -100,7 +99,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning style={{ backgroundColor: "#f9f9f9", color: "#1a1c1c" }}>
         <OfferBanner />
         {children}
-        <AIChat />
         {/* LeadConnector chatbot — tracks client questions */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"

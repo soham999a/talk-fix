@@ -26,7 +26,7 @@ const STANDARDS = [
   "Structured repair systems, not guesswork",
   "Corporate-level standards across all locations",
   "Highly trained, certified technicians",
-  "Fast 30-45 Minsute turnaround",
+  "Fast 30-45 Minute turnaround",
   "Clean, professional stores",
   "Consistent customer experience every time",
 ];
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 <span className="text-red-700">Driven by Trust.</span>
               </h1>
               <p className="text-stone-600 text-lg leading-relaxed mb-8">
-                Newark &amp; Passaic&apos;s Most Trusted Same-Day Phone Repair. 30-45 Minsute Repairs. 1,000+ Devices Fixed Monthly. Trusted by Thousands Across New Jersey.
+                Founded in 2014, Talk N Fix Wireless provides professional, same-day phone and device repair from convenient locations in Newark and Passaic, trusted by customers across nearby New Jersey communities. Built on speed, quality, and trust.
               </p>
               <Link href="/book" className="bg-primary-gradient text-white font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all shadow-primary inline-flex items-center gap-2">
                 Get Your Device Fixed
