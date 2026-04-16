@@ -68,37 +68,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-24 flex items-center justify-between">
 
         {/* ── LOGO ── */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0" aria-label="Talk N Fix Wireless">
-          {/* Phone icon — zoomed from favicon.JPG */}
+        <Link href="/" className="flex items-center flex-shrink-0" aria-label="Talk N Fix Wireless">
           <div className="overflow-hidden flex-shrink-0" style={{ width: "38px", height: "46px" }}>
             <img
               src="/favicon.JPG"
-              alt=""
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", transform: "scale(1.2)", transformOrigin: "center 60%" }}
+              alt="Talk N Fix Wireless"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", transform: "scale(2.8)", transformOrigin: "center 60%" }}
             />
-          </div>
-          {/* Text matching actual logo */}
-          <div className="flex flex-col leading-none gap-0.5">
-            <span style={{
-              fontFamily: "'Bebas Neue', 'Impact', 'Arial Black', sans-serif",
-              fontSize: "26px",
-              fontWeight: 900,
-              color: "#111111",
-              letterSpacing: "0.08em",
-              lineHeight: 1,
-            }}>
-              TALK N&apos; FIX
-            </span>
-            <span style={{
-              fontFamily: "'Bebas Neue', 'Impact', 'Arial Black', sans-serif",
-              fontSize: "11px",
-              fontWeight: 700,
-              color: "#444444",
-              letterSpacing: "0.4em",
-              lineHeight: 1,
-            }}>
-              WIRELESS
-            </span>
           </div>
         </Link>
 

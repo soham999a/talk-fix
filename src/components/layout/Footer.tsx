@@ -50,13 +50,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
-            <Link href="/" className="mb-4 flex items-center gap-3" aria-label="Talk N Fix Wireless">
+            <Link href="/" className="mb-4 flex items-center" aria-label="Talk N Fix Wireless">
               <div className="overflow-hidden flex-shrink-0" style={{ width: "32px", height: "40px" }}>
                 <img src="/favicon.JPG" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", transform: "scale(2.8)", transformOrigin: "center 60%" }} />
-              </div>
-              <div className="flex flex-col leading-none gap-0.5">
-                <span style={{ fontFamily: "'Bebas Neue', Impact, sans-serif", fontSize: "20px", fontWeight: 900, color: "#111111", letterSpacing: "0.06em", lineHeight: 1 }}>TALK N&apos; FIX</span>
-                <span style={{ fontFamily: "'Bebas Neue', Impact, sans-serif", fontSize: "9px", fontWeight: 700, color: "#555555", letterSpacing: "0.35em", lineHeight: 1 }}>WIRELESS</span>
               </div>
             </Link>
             <p className="text-zinc-500 text-xs sm:text-sm leading-relaxed mb-2">
