@@ -51,8 +51,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 flex items-center" aria-label="Talk N Fix Wireless">
-              <div className="overflow-hidden flex-shrink-0" style={{ width: "32px", height: "40px" }}>
-                <img src="/favicon.JPG" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", transform: "scale(2.8)", transformOrigin: "center 60%" }} />
+              <div className="overflow-hidden rounded-lg flex-shrink-0" style={{ width: "44px", height: "44px" }}>
+                <img src="/favicon.JPG" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%", transform: "scale(1.3)", transformOrigin: "center 60%" }} />
               </div>
             </Link>
             <p className="text-zinc-500 text-xs sm:text-sm leading-relaxed mb-2">
@@ -113,6 +113,7 @@ export default function Footer() {
               {[
                 ["About Us", "/about"],
                 ["Blog", "/blog"],
+                ["Careers", "/careers"],
                 ["Contact", "/contact"],
                 ["Privacy Policy", "/privacy-policy"],
                 ["Terms & Conditions", "/terms-and-conditions"],
