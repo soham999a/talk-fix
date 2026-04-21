@@ -61,7 +61,7 @@ export default function CareersPage() {
         {/* How it works */}
         <section className="px-4 sm:px-6 py-14 max-w-4xl mx-auto">
           <h2 className="text-2xl font-extrabold text-zinc-900 mb-2 text-center" style={{ fontFamily: "Plus Jakarta Sans" }}>How to Apply</h2>
-          <p className="text-stone-500 text-center mb-10">Record a short video (1-3 minutes) answering these 3 questions, upload it to Google Drive, and paste the link below.</p>
+          <p className="text-stone-500 text-center mb-10">Record a short video (under 1 minute) answering these 3 questions, upload it to Google Drive, and paste the link below.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {STEPS.map(s => (
               <div key={s.num} className="bg-white rounded-2xl p-6 shadow-sm border border-zinc-100">
